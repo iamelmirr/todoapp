@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body {
+    
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(135deg, #153677, #4e085f)
+}
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    background: #fff;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    height: 100%;
+    gap: 30px;
+    padding: 3rem 2.5rem;
+    padding-bottom: 5rem;
+}
+
+.header-div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+.header-div h2 {
+    font-size: 1.6rem;
+    color: rgb(63, 16, 75);
+}
+
+.header-div img {
+    height: 35px;
+}
+
+.row {
+    display: flex;
+    height: 50px;
+    border-radius: 20px;
+    background: rgb(224, 224, 224);
+    padding-left: 1rem;
+    
+}
+
+.row input {
+    outline: none;
+    border: none;
+    width: 400px;
+    background: transparent;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.row button {
+    background: rgb(255, 80, 80);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+    animation: taskFadeIn 0.5s ease-out;
+}
+
+.task-name 
+    {
+        cursor: pointer;
+        position: relative;
+        padding-left: 35px;
+        user-select: none;
+    }
+
+
+.checked {
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+}
+
+
+.checked::before {
+    content: '';
+    background-image: url(images/checked.png);
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    background-size: cover;
+    background-position: center;
+    left: 5px;
+    top: -2px;
+    
+}
+
+.unchecked::before {
+    content: '';
+    background-image: url(images/unchecked.png);
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    background-size: cover;
+    background-position: center;
+    left: 5px;
+    top: -2px;
+    
+}
+
+.delete-button {
+    background: transparent;
+    border: none;
+    display: grid;
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+@keyframes taskFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
