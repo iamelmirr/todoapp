@@ -58,3 +58,8 @@ inputText.addEventListener('keydown' ,function(event) {
         addNewTask()
     }
 })
+
+
+function SaveToLocalStorage() {
+    
+}
